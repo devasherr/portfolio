@@ -18,7 +18,7 @@ function BlogCard({ blog }) {
         <h2 className="card-title text-xl">{blog.title}</h2>
         <p className="text-md mt-3">{blog.description}</p>
         <div className="card-actions flex justify-between items-center mt-4">
-          <span className="text-md">{blog.reading_time_minutes} Min Read</span>
+          <span className="text-md">{blog.reading_time_minutes}</span>
           <button className="btn btn-primary">Read</button>
         </div>
       </div>
