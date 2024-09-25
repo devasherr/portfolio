@@ -1,13 +1,7 @@
 // @flow strict
-import { timeConverter } from "@/utils/time-converter";
-import Image from "next/image";
-import Link from "next/link";
-import { BsHeartFill } from "react-icons/bs";
-import { FaCommentAlt } from "react-icons/fa";
-
 function BlogCard({ blog }) {
   return (
-    <div className="card bg-base-100 image-full w-[500px] h-[300px] my-5 shadow-xl">
+    <div className="card bg-base-100 image-full w-full shadow-xl">
       <figure>
         <img
           src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"

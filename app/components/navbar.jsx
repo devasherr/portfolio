@@ -1,45 +1,82 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 function Navbar() {
-  return (
-    <nav
-      className="sticky top-10 z-[9999] mx-auto w-[80%] bg-white/10 backdrop-blur-md border border-gray-300 rounded-[50px] shadow-[0px_0px_20px_2px_rgba(0,132,255,0.1)]
-"
-    >
-      <div className="flex items-center justify-between py-2 px-4">
-        <div className="flex flex-shrink-0 items-center">
-          <Link href="/" className="text-[#F2F5EA] text-2xl font-bold">
-            A3sher
-          </Link>
-        </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <ul
-          className="flex h-screen max-h-0 w-full flex-col items-start opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-4 md:border-0 md:opacity-100"
-          id="navbar-default"
-        >
-          {[
-            { href: "/#about", label: "ABOUT" },
-            { href: "/#experience", label: "EXPERIENCE" },
-            { href: "/#skills", label: "SKILLS" },
-            { href: "/#education", label: "EDUCATION" },
-            { href: "/#blog", label: "BLOGS" },
-            { href: "/#projects", label: "PROJECTS" },
-          ].map((item) => (
-            <li key={item.href}>
-              <Link
-                className="block px-2 py-2 no-underline outline-none hover:no-underline"
-                href={item.href}
-              >
-                <div className="text-md text-white transition-colors duration-300 hover:text-pink-600">
-                  {item.label}
-                </div>
-              </Link>
-            </li>
-          ))}
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <div className="sticky top-10 z-[9999] navbar backdrop-blur-md bg-white/30 border border-gray-300 rounded-[50px] shadow-lg">
+      <div className="navbar-start">
+        {/* Mobile Menu Icon */}
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? (
+              <AiOutlineClose className="h-5 w-5" />
+            ) : (
+              <AiOutlineMenu className="h-5 w-5" />
+            )}
+          </div>
+          {/* Dropdown Menu for Small Screens */}
+          {isMenuOpen && (
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content backdrop-blur-md bg-slate-900/80 border border-gray-200 rounded-box z-[1] mt-3 w-[200px] p-2 shadow flex flex-col items-center"
+            >
+              <li className="w-full text-center">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="w-full text-center">
+                <Link href="/about">About</Link>
+              </li>
+              <li className="w-full text-center">
+                <Link href="/contact">Contact</Link>
+              </li>
+              <li className="w-full text-center">
+                <Link href="/projects">Projects</Link>
+              </li>
+              <li className="w-full text-center">
+                <Link href="/experience">Experience</Link>
+              </li>
+            </ul>
+          )}
+        </div>
+        {/* Navbar Logo */}
+        <a className="btn btn-ghost text-xl">A3HER</a>
+      </div>
+
+      {/* Navbar Center for Larger Screens */}
+      <div className="navbar-center hidden lg:flex flex-row">
+        <ul className="menu menu-horizontal backdrop-blur-m">
+          <li className="text-center text-lg">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="text-center text-lg">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="text-center text-lg">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li className="text-center text-lg">
+            <Link href="/projects">Projects</Link>
+          </li>
+          <li className="text-center text-lg">
+            <Link href="/experience">Experience</Link>
+          </li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 }
 
