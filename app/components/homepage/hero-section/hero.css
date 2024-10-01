@@ -23,6 +23,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Roboto", sans-serif;
+  /* --body-font: "Lora", serif; */
   --title-font: "Lora", serif;
   --biggest-font-size: 1.5rem;
   --h1-font-size: 1.5rem;
@@ -298,7 +299,7 @@ body.dark-theme {
 
 .home__info-description,
 .home__info-number {
-  font-family: var(--title-font);
+  font-family: var(--bodys-font);
   color: var(--title-color);
 }
 

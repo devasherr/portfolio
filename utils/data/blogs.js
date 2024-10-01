@@ -1,25 +1,17 @@
 export const blogData = [
   {
-    cover_image: "",
+    cover_image: "go_ffmpeg.jfif",
     title: "Video Compression With Go",
     reading_time_minutes: "4 min read",
     description:
-      "i made a video streaming app recently but the storage i have is limit to i made ...",
-    url: "nowhere",
-  },
-  {
-    cover_image: "",
-    title: "Lets Make A Chess Engine",
-    reading_time_minutes: "7 min read",
-    description:
-      "I dont know chess, so like a normal person im going to learn chess BY MAKING IT :) ",
-    url: "nowhere",
+      "I recently built a video streaming app, but like many developers, I faced a similar constraint: limited storage space. With more videos being uploaded, I was running out of storage fast . . .",
+    url: "https://medium.com/@ashersam116/video-compression-in-go-using-ffmpeg-7b3761db241d",
   },
   {
     cover_image: "",
     title: "More Blogs Coming Soon ...",
     reading_time_minutes: "",
-    description: "stay tuned for some interesting blogs",
+    description: "Stay tuned for some interesting blogs",
     url: "",
   },
 ];

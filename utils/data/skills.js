@@ -1,20 +1,29 @@
-export const skillsData = [
+export const FrontendSkills = [
   "HTML",
-  "CSS",
   "Javascript",
-  "Typescript",
   "React",
   "Next JS",
+  "Redux",
+  "Scss",
+  "Git",
   "Tailwind",
+  "Astro",
+  "CSS",
+  "Typescript",
+];
+
+export const BackendSkills = [
+  "Node JS",
+  "Go",
   "MongoDB",
+  "Firebase",
   "MySQL",
   "PostgreSQL",
   "Git",
   "AWS",
+  "Typescript",
+  "Python",
   "Docker",
-  "Go",
-  "Firebase",
-  "MaterialUI",
   "Nginx",
 ];
 

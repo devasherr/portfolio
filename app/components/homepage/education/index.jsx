@@ -1,11 +1,17 @@
 // @flow strict
 import Image from "next/image";
+import { Lora } from "next/font/google";
 
 import { educations } from "@/utils/data/educations";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import lottieFile from "/public/lottie/study.json";
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 function Education() {
   return (
@@ -69,13 +75,15 @@ function Education() {
                         <BsPersonWorkspace size={36} />
                       </div>
                       <div>
-                        <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                        <p
+                          className={`${lora.className} text-base sm:text-xl mb-2 font-medium uppercase`}
+                        >
                           {education.title}
                         </p>
-                        <p className="text-sm sm:text-base">
+                        <p className={`${lora.className} text-sm sm:text-base`}>
                           {education.institution}
                         </p>
-                        <p className="text-sm sm:text-base">
+                        <p className="text-sm sm:text-base mt-3">
                           {education.details}
                         </p>
                       </div>

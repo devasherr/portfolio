@@ -1,41 +1,43 @@
-import ayla from "/public/image/ayla.jpg";
-import crefin from "/public/image/crefin.jpg";
-import realEstate from "/public/image/real-estate.jpg";
-import travel from "/public/image/travel.jpg";
-
 export const projectsData = [
   {
     id: 1,
-    name: "AI Powered Cyber Intelligence",
+    name: "AI based Cyber Threat Intelligence",
     description:
-      "Me and my team built an AI-powered financial mobile application.",
-    tools: ["AWS SES", "AWS S3", "PM2", "Nginx"],
-    role: "Backend Developer",
-    code: "",
+      "A cybersecurity tool leveraging Natural Language Processing (NLP) with the BERT model to extract and analyze threat intelligence from OSINT data",
+    tools: ["Python", "React", "Flask", "Bert", "PyTorch"],
+    code: "https://github.com/devasherr/yafasha_cti_frontend",
     demo: "",
-    image: crefin,
+    image: "cit-college2.png",
   },
   {
     id: 2,
-    name: "Music Streaming Platform",
+    name: "Video Streaming Platform",
     description:
-      "I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia.",
-    tools: ["ReactJs", "MongoDB", "Go"],
-    role: "Full Stack Developer",
-    code: "",
-    demo: "",
-    image: travel,
+      "A video streaming platform that allows users to view, react to, and upload videos. Videos are compressed to smaller file sizes using a Go-based tool before being sent to storage",
+    tools: ["ReactJs", "Redux", "NodeJs", "MongoDB", "Firebase", "Go"],
+    code: "https://github.com/devasherr/video_streaming_backend",
+    demo: "https://vt-streaming.vercel.app/",
+    image: "vt-stream.png",
   },
   {
     id: 3,
-    name: "AI Powered Real Estate",
+    name: "Habesha Blog",
     description:
-      "My team built an AI-based real estate app using Replicate API and OpenAI. ",
-    tools: ["React", "TypeScript", "MongoDB"],
-    code: "",
-    role: "Full Stack Developer",
+      "A dedicated blog website that showcases Habesha culture, traditions, and stories. The platform allows users to share articles, insights, and experiences related to Habesha heritage",
+    tools: ["React", "NodeJs", "MySql", "TypeScript"],
+    code: "https://github.com/devasherr/blog_app_Backend",
+    demo: "https://65114fe7b7080372f03405db--legendary-semolina-2eb566.netlify.app/",
+    image: "habesha_blog2.png",
+  },
+  {
+    id: 4,
+    name: "Personal Finance Manager",
+    description:
+      "A financial management tool leveraging advanced data processing and visualization techniques to help users track income and expenses, analyze budgets through interactive graphs and charts, and securely store transaction history for easy access and review.",
+    tools: ["React", "Node", "MySql"],
+    code: "https://github.com/devasherr/income_expense",
     demo: "",
-    image: realEstate,
+    image: "income_expense.png",
   },
 ];
 

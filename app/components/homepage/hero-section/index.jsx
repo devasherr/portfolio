@@ -1,17 +1,5 @@
 // @flow strict
 
-import { personalData } from "@/utils/data/personal-data";
-import Image from "next/image";
-// import me from "/image/07.png";
-import waves from "../../../../public/image/shape-wawes.svg";
-import circle from "../../../../public/image/shape-circle.svg";
-
-import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
-import { MdDownload } from "react-icons/md";
-import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 import "./hero.css";
 
 function HeroSection() {
@@ -48,8 +36,8 @@ function HeroSection() {
             <div>
               <h3 className="home__info-title">BIOGRAPHY</h3>
               <p className="home__info-description">
-                Hi, I'm Asher, a Software Developer. Passionate about developing
-                exquisite and highly responsive digital masterpieces.
+                Hey there! I'm Asher, a Software Developer. I love turning Ideas
+                into Reality!
               </p>
             </div>
 
@@ -84,7 +72,7 @@ function HeroSection() {
 
             <div>
               <h3 className="home__info-title">COMPLETED PROJECTS</h3>
-              <p className="home__info-number">12+</p>
+              <p className="home__info-number">11+</p>
             </div>
 
             {/* <div>
