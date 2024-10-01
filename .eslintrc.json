@@ -1,3 +1,13 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Disable a rule
+    "no-unused-vars": "off",
+
+    // Set a rule to give a warning instead of an error
+    "react/no-unescaped-entities": "warn",
+
+    // Disable the ESLint for image optimization warnings in Next.js
+    "@next/next/no-img-element": "off"
+  }
 }
