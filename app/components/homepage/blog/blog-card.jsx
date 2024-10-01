@@ -1,25 +1,19 @@
-import Image from "next/image";
-
 // @flow strict
 function BlogCard({ blog }) {
   return (
     <div className="relative card bg-base-100 w-full shadow-xl">
       <figure className="absolute inset-0 h-full w-full">
         {blog.cover_image == "" ? (
-          <Image
+          <img
             src={`/image/soon.jfif`}
             alt="go_ffmpeg"
-            layout="fill"
-            objectFit="cover"
-            className="filter blur-sm"
+            className="object-cover h-full w-full filter blur-sm"
           />
         ) : (
-          <Image
+          <img
             src={`/image/${blog.cover_image}`}
             alt="go_ffmpeg"
-            layout="fill"
-            objectFit="cover"
-            className="filter blur-sm"
+            className="object-cover h-full w-full filter blur-md"
           />
         )}
 
